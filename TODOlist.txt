@@ -26,4 +26,13 @@ Things that need to be done :
     Add Horizontal Line drawing function
     Add Zone drawing function
     Add Vertical line drawing function
+- Build Dashboard layout
+    Build in Static HTML
+        Build in Pinegrow ?
+        Serve the Static HTML on the Dash app
+    Integrate Graph into static HTML
+    Build Form controls
+        Build simple form controls
+        Build Form controls with Callbacks that trigger events
+        Build Form controls that control the figure
 
