@@ -1,0 +1,29 @@
+Things that need to be done :
+
+
+- DataConnection
+    Build individual Stock Data Function ( on Bar refresh )
+    Build Options Data to Dataframe Function
+    Build Options individual Contract Details
+- DataConnection Storage
+    Build a databasing system for the Data so it is not always requested from IEX
+        Build a database system connection
+        Build a CRUD system for the Database
+        Build a function which can check for the available data
+- Build Flask App with Dash integration
+    Learn more about Dash app
+    Learn more about Flask app
+    Integrate
+- Technical Analysis
+    Package Fiblevels as a class
+    Package Trendline Finder as a class
+        Package Finding Peaks as a class
+    Find/Create OHLC Bar Analysis functions
+        Find Engulfing functions
+            Find Support resistance zones
+- Extend Figure Class
+    Add Trendline drawing function
+    Add Horizontal Line drawing function
+    Add Zone drawing function
+    Add Vertical line drawing function
+
