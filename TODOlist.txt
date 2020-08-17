@@ -36,4 +36,10 @@ Things that need to be done :
         Build Form controls with Callbacks that trigger events
         Build Form controls that control the figure
 - Host Application on AWS Server
+- Build a Webscraper for Benzinga Options alerts scraping
+    Build a random user agent system
+    Build a Data Object to parse
+    Build a parsing tree
+    Build a Display View
+    Connect to a database
 
