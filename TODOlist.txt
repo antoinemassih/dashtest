@@ -35,4 +35,5 @@ Things that need to be done :
         Build simple form controls
         Build Form controls with Callbacks that trigger events
         Build Form controls that control the figure
+- Host Application on AWS Server
 
