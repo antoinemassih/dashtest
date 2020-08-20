@@ -1,29 +1,34 @@
-
 from sqlalchemy.types import Integer, Text, String, DateTime, Float
-from datetime import datetime
-from DataConnection.StockData import StockDataFrame as SDF
 from DataConnection.dbconnect import DBConnect
+import pandas as pd
 
 
-StockData = SDF('AAPL')
-StockData.get_historical(datetime(2018, 1, 1), datetime(2020, 1, 1))
+class DFDBObject:
+    data = pd.DataFrame()
+    engine = DBConnect.engine
+    table = DBConnect.table
 
-df = StockData.data
+    def __init__(self, data):
+        self.data = data
 
-df.to_sql(
-    DBConnect.table,
-    DBConnect.engine,
-    if_exists='replace',
-    index=False,
-    chunksize=500,
-    dtype={
-        "spot_id": Integer,
-        "Date": DateTime,
-        "Open": Float,
-        "High":  Float,
-        "Low": Float,
-        "Close": Float,
-        "Volume": Integer
-    }
-)
 
+    def SendToDB(self):
+        datatypes = self.GetDataTypes()
+
+        self.data.to_sql(
+            self.table,
+            self.engine,
+            if_exists='replace',
+            index=False,
+            chunksize=500,
+            dtype=datatypes
+        )
+
+    def GetDataTypes(self):
+        datatypes = {self.data.index.name: "int"}
+        types = self.data.dtypes
+        columns = self.data.columns
+
+        for col, dtype in zip(columns, types):
+            datatypes.update({col: str(dtype)})
+        return datatypes

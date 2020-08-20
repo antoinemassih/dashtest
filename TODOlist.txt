@@ -42,4 +42,7 @@ TODO Build a Webscraper for Benzinga Options alerts scraping
     Build a parsing tree
     Build a Display View
     Connect to a database
-
+TODO Identiy supply and demand zones
+    Identify supply and demand zones
+    Identify supply and demand zones on Options charts
+    Identify supply and demand zones dynamically set lenghts of time

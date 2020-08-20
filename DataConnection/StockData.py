@@ -26,5 +26,6 @@ class StockDataFrame:
         self.data = pd.DataFrame.from_dict(get_historical_data(self.ticker, start, end), orient='index',columns=['open','high','low','close','volume'])
         self.data.index.name = "Date"
         self.data = self.data.reset_index()
+        self.data.index.name = "Entry_Id"
 
 
