@@ -22,7 +22,7 @@ StockData.get_historical(datetime(2018, 1, 1), datetime(2020, 1, 1))
 
 df = StockData.data
 
-trace = go.Ohlc(x=df['Date'],
+trace = go.Candlestick(x=df['Date'],
                     open=df['open'],
                     high=df['high'],
                     low=df['low'],
@@ -40,7 +40,7 @@ track_highlight = go.Candlestick(
     name='highlight'
 )
 
-fig = go.Figure(data=(trace,track_highlight))
+fig = go.Figure(data=(trace,track_highlight), layout={"height":800})
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),

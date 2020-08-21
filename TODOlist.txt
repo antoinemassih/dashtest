@@ -1,8 +1,11 @@
  Things that need to be done :
 
-
+TODO StockData Object
+    Build a StockData Object which checks for SQL or API Data
+    Build a StockDataStore Function into the Data Object
 TODO DataConnection
-    Build individual Stock Data Function ( on Bar refresh )
+    Build individual Stock Data Function
+    Build Stock Data Connection ( on Bar refresh )
     Build Options Data to Dataframe Function
     Build Options individual Contract Details
 TODO DataConnection Storage
@@ -10,6 +13,15 @@ TODO DataConnection Storage
         Build a database system connection
         Build a CRUD system for the Database
         Build a function which can check for the available data
+TODO Build a CAndlestick Object
+
+TODO Build a levels Object
+
+TODO Build a Candlestick Databasing system
+
+TODO Build a Levels Databasing system
+TODO Build a Trendline Databasing system
+
 TODO Build Flask App with Dash integration
     Learn more about Dash app
     Learn more about Flask app
